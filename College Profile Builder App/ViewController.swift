@@ -16,9 +16,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
        
     }
-
+    //func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    
+    //func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
    
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return colleges.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("My Cell", forIndexPath: indexPath)
+        cell.textLabel?.text = colleges[indexPath.row]
+        return cell
+    }
 
 }
 
