@@ -45,7 +45,13 @@
                             <constraint firstItem="HMU-my-MTv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lo3-mo-353"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5uX-6L-5ne"/>
+                    <navigationItem key="navigationItem" id="5uX-6L-5ne">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lpB-iZ-Vlw">
+                            <connections>
+                                <action selector="onTappedAddButton:" destination="BYZ-38-t0r" id="Ges-ax-oE1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="HMU-my-MTv" id="Y7u-bc-46f"/>
                     </connections>
