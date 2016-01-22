@@ -11,13 +11,16 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    var colleges = ["University of Miami", "University of Colorado Boulder", "Colorado State"]
     @IBOutlet weak var editButton: UIBarButtonItem!
-    //var cities : [City] = []
+    var colleges : [College] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
+        
+        colleges.append(College(name: "University of Miami", location: "Miami, Florida", numberOfStudents: 16774, image: UIImage(named: "Miami")!))
+        colleges.append(College(name: "University of Colorado Boulder", location: "Boulder, Colorado", numberOfStudents: 30265, image: UIImage(named: "Boulder")!))
+        colleges.append(College(name: "Colorado State", location: "Fort Collins, Colorado", numberOfStudents: 32236, image: UIImage(named: "Colorado")!))
        }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,7 +29,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("My Cell", forIndexPath: indexPath)
-        cell.textLabel?.text = colleges[indexPath.row]
+        cell.textLabel?.text = colleges[indexPath.row].name
         return cell
     }
     
@@ -56,7 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(cancelAction)
         let addAction = UIAlertAction(title: "Add", style: .Default) { (action) -> Void in
             let collegesTextField = alert.textFields![0] as UITextField
-            self.colleges.append(collegesTextField.text!)
+            self.colleges.append(College(name: collegesTextField.text!))
             self.tableView.reloadData() }
         
         alert.addAction(addAction)
