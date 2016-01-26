@@ -29,6 +29,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dic-w0-6mD" kind="show" id="lMz-FL-bKz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -79,25 +82,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E8P-kY-UiX">
-                                <rect key="frame" x="188" y="61" width="150" height="30"/>
+                                <rect key="frame" x="188" y="72" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iML-f5-9Iw">
-                                <rect key="frame" x="188" y="121" width="150" height="30"/>
+                                <rect key="frame" x="188" y="126" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYf-kx-t6u">
                                 <rect key="frame" x="188" y="184" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-uM-cFH">
-                                <rect key="frame" x="163" y="239" width="250" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-uM-cFH">
+                                <rect key="frame" x="163" y="225" width="250" height="150"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-d6-ogc">
-                                <rect key="frame" x="251" y="447" width="50" height="30"/>
+                                <rect key="frame" x="263" y="378" width="50" height="30"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -108,15 +111,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="gnA-uM-cFH" secondAttribute="trailing" constant="167" id="907-LP-ytr"/>
+                            <constraint firstItem="gnA-uM-cFH" firstAttribute="top" secondItem="ZYf-kx-t6u" secondAttribute="bottom" constant="25" id="IPV-h9-1Ym"/>
+                            <constraint firstItem="8cc-d6-ogc" firstAttribute="top" secondItem="gnA-uM-cFH" secondAttribute="bottom" constant="58" id="K5h-x7-may"/>
+                            <constraint firstItem="gnA-uM-cFH" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="Mwg-WW-G04"/>
                             <constraint firstItem="ZYf-kx-t6u" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="OJq-7x-UV4"/>
                             <constraint firstItem="iML-f5-9Iw" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="Qbr-TF-gp8"/>
-                            <constraint firstItem="gnA-uM-cFH" firstAttribute="top" secondItem="ZYf-kx-t6u" secondAttribute="bottom" constant="25" id="RIe-t0-Hp9"/>
-                            <constraint firstItem="8cc-d6-ogc" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="eul-jt-L2I"/>
-                            <constraint firstItem="gnA-uM-cFH" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="jWX-TO-w7C"/>
+                            <constraint firstItem="8cc-d6-ogc" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="eGh-Ec-5du"/>
+                            <constraint firstItem="gnA-uM-cFH" firstAttribute="leading" secondItem="Gfp-PV-SMk" secondAttribute="leadingMargin" constant="143" id="k4C-ge-cVi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gnA-uM-cFH" secondAttribute="trailing" constant="167" id="mDe-bA-leB"/>
                             <constraint firstItem="E8P-kY-UiX" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="mYx-x6-oOt"/>
-                            <constraint firstItem="gnA-uM-cFH" firstAttribute="leading" secondItem="Gfp-PV-SMk" secondAttribute="leadingMargin" constant="143" id="sYc-wo-CMi"/>
-                            <constraint firstItem="8cc-d6-ogc" firstAttribute="top" secondItem="gnA-uM-cFH" secondAttribute="bottom" constant="58" id="une-pD-Se3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -128,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8p-1e-aFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="-399"/>
+            <point key="canvasLocation" x="1637" y="-399"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sM8-zg-zVe">
@@ -146,7 +149,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIn-JI-oDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="290" y="-404"/>
+            <point key="canvasLocation" x="290" y="-399"/>
         </scene>
     </scenes>
 </document>
