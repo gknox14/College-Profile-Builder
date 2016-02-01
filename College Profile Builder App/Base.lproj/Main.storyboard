@@ -87,18 +87,15 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iML-f5-9Iw">
-                                <rect key="frame" x="188" y="126" width="150" height="30"/>
+                                <rect key="frame" x="188" y="110" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYf-kx-t6u">
-                                <rect key="frame" x="188" y="184" width="150" height="30"/>
+                                <rect key="frame" x="188" y="156" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-uM-cFH">
-                                <rect key="frame" x="163" y="225" width="250" height="150"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-d6-ogc">
                                 <rect key="frame" x="263" y="378" width="50" height="30"/>
                                 <state key="normal" title="Save">
@@ -108,6 +105,21 @@
                                     <action selector="onTappedSaveButton:" destination="dic-w0-6mD" eventType="touchUpInside" id="GmN-tA-3nh"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXU-RC-tJC">
+                                <rect key="frame" x="188" y="194" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOn-Ws-wle">
+                                <rect key="frame" x="389" y="193" width="46" height="30"/>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <action selector="goToWebsite:" destination="dic-w0-6mD" eventType="touchUpInside" id="uEu-fg-iYB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-uM-cFH">
+                                <rect key="frame" x="163" y="232" width="250" height="150"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -120,6 +132,7 @@
                             <constraint firstItem="gnA-uM-cFH" firstAttribute="leading" secondItem="Gfp-PV-SMk" secondAttribute="leadingMargin" constant="143" id="k4C-ge-cVi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gnA-uM-cFH" secondAttribute="trailing" constant="167" id="mDe-bA-leB"/>
                             <constraint firstItem="E8P-kY-UiX" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="mYx-x6-oOt"/>
+                            <constraint firstItem="WXU-RC-tJC" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="vJ1-JH-kZh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -127,6 +140,7 @@
                         <outlet property="imageView" destination="gnA-uM-cFH" id="ONH-ED-Xos"/>
                         <outlet property="locationTextField" destination="iML-f5-9Iw" id="EYe-PL-nbY"/>
                         <outlet property="numberOfStudentsTextField" destination="ZYf-kx-t6u" id="OYc-ab-2ev"/>
+                        <outlet property="urlTextField" destination="WXU-RC-tJC" id="kFt-HB-iMT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8p-1e-aFC" userLabel="First Responder" sceneMemberID="firstResponder"/>

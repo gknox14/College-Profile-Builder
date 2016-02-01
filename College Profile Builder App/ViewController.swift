@@ -18,9 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         editButton.tag = 0
         
-        colleges.append(College(name: "University of Miami", location: "Miami, Florida", numberOfStudents: 16774, image: UIImage(named: "Miami")!))
-        colleges.append(College(name: "University of Colorado Boulder", location: "Boulder, Colorado", numberOfStudents: 30265, image: UIImage(named: "Boulder")!))
-        colleges.append(College(name: "Colorado State", location: "Fort Collins, Colorado", numberOfStudents: 32236, image: UIImage(named: "Colorado")!))
+        colleges.append(College(name: "University of Miami", location: "Miami, Florida", numberOfStudents: 16774, url: "http://welcome.miami.edu", image: UIImage(named: "Miami")!))
+        colleges.append(College(name: "University of Colorado Boulder", location: "Boulder, Colorado", numberOfStudents: 30265, url: "http://www.colorado.edu", image: UIImage(named: "Boulder")!))
+        colleges.append(College(name: "Colorado State", location: "Fort Collins, Colorado", numberOfStudents: 32236, url: "http://www.colostate.edu", image: UIImage(named: "Colorado")!))
        }
     
     override func viewWillAppear(animated: Bool) {
@@ -76,6 +76,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(addAction)
         self.presentViewController(alert, animated: true, completion: nil)
         }
+    
     @IBAction func onTappedEditButton(sender: UIBarButtonItem) {
         if sender.tag == 0 {
             tableView.editing = true
