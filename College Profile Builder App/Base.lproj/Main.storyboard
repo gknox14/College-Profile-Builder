@@ -96,7 +96,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-d6-ogc">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-d6-ogc">
                                 <rect key="frame" x="263" y="384" width="50" height="30"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,32 +105,47 @@
                                     <action selector="onTappedSaveButton:" destination="dic-w0-6mD" eventType="touchUpInside" id="GmN-tA-3nh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOn-Ws-wle">
-                                <rect key="frame" x="339" y="194" width="46" height="30"/>
-                                <state key="normal" title="Go!"/>
-                                <connections>
-                                    <action selector="goToWebsite:" destination="dic-w0-6mD" eventType="touchUpInside" id="uEu-fg-iYB"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-uM-cFH">
-                                <rect key="frame" x="156" y="238" width="250" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnA-uM-cFH">
+                                <rect key="frame" x="156" y="226" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="D5e-bu-Ur7"/>
+                                    <constraint firstAttribute="width" constant="250" id="IL7-7n-gEd"/>
+                                    <constraint firstAttribute="height" constant="150" id="LbY-Vb-MGT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="SOh-jO-geu"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXU-RC-tJC">
                                 <rect key="frame" x="188" y="186" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ys-FP-O1F">
+                                <rect key="frame" x="311" y="237" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="onCameraTappedButton:" destination="dic-w0-6mD" eventType="touchUpInside" id="Hw3-dq-BZ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOn-Ws-wle">
+                                <rect key="frame" x="296" y="185" width="46" height="30"/>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <action selector="goToWebsite:" destination="dic-w0-6mD" eventType="touchUpInside" id="uEu-fg-iYB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sW-zg-kX6">
+                                <rect key="frame" x="311" y="275" width="54" height="30"/>
+                                <state key="normal" title="Library"/>
+                                <connections>
+                                    <action selector="onLibraryTappedButton:" destination="dic-w0-6mD" eventType="touchUpInside" id="Ed1-Rq-JVY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gnA-uM-cFH" firstAttribute="top" secondItem="ZYf-kx-t6u" secondAttribute="bottom" constant="25" id="IPV-h9-1Ym"/>
-                            <constraint firstItem="8cc-d6-ogc" firstAttribute="top" secondItem="gnA-uM-cFH" secondAttribute="bottom" constant="58" id="K5h-x7-may"/>
-                            <constraint firstItem="gnA-uM-cFH" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="Mwg-WW-G04"/>
                             <constraint firstItem="ZYf-kx-t6u" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="OJq-7x-UV4"/>
                             <constraint firstItem="iML-f5-9Iw" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="Qbr-TF-gp8"/>
-                            <constraint firstItem="8cc-d6-ogc" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="eGh-Ec-5du"/>
-                            <constraint firstItem="gnA-uM-cFH" firstAttribute="leading" secondItem="Gfp-PV-SMk" secondAttribute="leadingMargin" constant="143" id="k4C-ge-cVi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gnA-uM-cFH" secondAttribute="trailing" constant="167" id="mDe-bA-leB"/>
+                            <constraint firstItem="gnA-uM-cFH" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="jxQ-Cd-71W"/>
                             <constraint firstItem="E8P-kY-UiX" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="mYx-x6-oOt"/>
                             <constraint firstItem="WXU-RC-tJC" firstAttribute="centerX" secondItem="Gfp-PV-SMk" secondAttribute="centerX" id="vJ1-JH-kZh"/>
                         </constraints>
