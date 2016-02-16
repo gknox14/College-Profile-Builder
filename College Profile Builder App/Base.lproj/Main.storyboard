@@ -117,7 +117,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXU-RC-tJC">
                                 <rect key="frame" x="188" y="186" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ys-FP-O1F">
                                 <rect key="frame" x="311" y="237" width="54" height="30"/>
@@ -138,6 +138,14 @@
                                 <state key="normal" title="Library"/>
                                 <connections>
                                     <action selector="onLibraryTappedButton:" destination="dic-w0-6mD" eventType="touchUpInside" id="Ed1-Rq-JVY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S56-kK-WEg">
+                                <rect key="frame" x="296" y="109" width="46" height="30"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <action selector="mapButton:" destination="dic-w0-6mD" eventType="touchUpInside" id="9aO-xh-Yb2"/>
+                                    <segue destination="TSD-Je-Cjj" kind="show" identifier="LocationSegue" id="oWo-DO-KQr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,6 +169,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8p-1e-aFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1637" y="-399"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="Ca2-VR-3L9">
+            <objects>
+                <viewController id="TSD-Je-Cjj" customClass="Map" customModule="College_Profile_Builder_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="msh-7L-z7g"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rju-BW-kww"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zTg-Vk-Q3v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KnI-lD-ZQj">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-Pq-CpS">
+                                <rect key="frame" x="252" y="96" width="166" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KnI-lD-ZQj" secondAttribute="trailing" constant="-20" id="FOb-0V-VZa"/>
+                            <constraint firstItem="Rju-BW-kww" firstAttribute="top" secondItem="KnI-lD-ZQj" secondAttribute="bottom" id="Mdi-lI-Xhz"/>
+                            <constraint firstItem="KnI-lD-ZQj" firstAttribute="leading" secondItem="zTg-Vk-Q3v" secondAttribute="leadingMargin" constant="-20" id="hTI-TZ-wE1"/>
+                            <constraint firstItem="KnI-lD-ZQj" firstAttribute="top" secondItem="msh-7L-z7g" secondAttribute="bottom" id="t1a-uP-ua7"/>
+                            <constraint firstItem="WI5-Pq-CpS" firstAttribute="centerX" secondItem="zTg-Vk-Q3v" secondAttribute="centerX" id="yBD-g8-rd0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="KnI-lD-ZQj" id="M4r-su-MSt"/>
+                        <outlet property="textField" destination="WI5-Pq-CpS" id="HE6-K8-Y1t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KuP-Xa-0af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2284" y="-399"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sM8-zg-zVe">

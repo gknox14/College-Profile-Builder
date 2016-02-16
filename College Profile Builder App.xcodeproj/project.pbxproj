@@ -16,6 +16,7 @@
 		050B806E1C5154A900B8207A /* College_Profile_Builder_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050B806D1C5154A900B8207A /* College_Profile_Builder_AppUITests.swift */; };
 		050B807C1C52A7EB00B8207A /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050B807B1C52A7EB00B8207A /* College.swift */; };
 		050B807E1C52ACCB00B8207A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050B807D1C52ACCB00B8207A /* DetailViewController.swift */; };
+		05C3A2FF1C6D0A7F00DDB7F6 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C3A2FE1C6D0A7F00DDB7F6 /* Map.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		050B806F1C5154A900B8207A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		050B807B1C52A7EB00B8207A /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
 		050B807D1C52ACCB00B8207A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		05C3A2FE1C6D0A7F00DDB7F6 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				050B804F1C5154A900B8207A /* ViewController.swift */,
 				050B807B1C52A7EB00B8207A /* College.swift */,
 				050B807D1C52ACCB00B8207A /* DetailViewController.swift */,
+				05C3A2FE1C6D0A7F00DDB7F6 /* Map.swift */,
 				050B80511C5154A900B8207A /* Main.storyboard */,
 				050B80541C5154A900B8207A /* Assets.xcassets */,
 				050B80561C5154A900B8207A /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C3A2FF1C6D0A7F00DDB7F6 /* Map.swift in Sources */,
 				050B80501C5154A900B8207A /* ViewController.swift in Sources */,
 				050B804E1C5154A900B8207A /* AppDelegate.swift in Sources */,
 				050B807C1C52A7EB00B8207A /* College.swift in Sources */,

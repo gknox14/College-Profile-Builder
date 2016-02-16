@@ -19,7 +19,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate,  U
     let imagePicker = UIImagePickerController()
     
     var college : College!
-    
+    var collegeLocation = DetailViewController() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +68,18 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate,  U
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func mapButton(sender: AnyObject) {
+        if locationTextField.text?.characters.count != 0 {
+            college.location = locationTextField.text!
+            performSegueWithIdentifier("LocationSegue", sender: self)
+        }
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! Map
+        dvc.collegeLocation = self.collegeLocation
+    }
+    
     
 
 
