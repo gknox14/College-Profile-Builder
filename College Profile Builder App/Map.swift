@@ -11,17 +11,18 @@ import MapKit
 
 class Map: UIViewController, UITextFieldDelegate {
     
-    var collegeLocation = DetailViewController()
-    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var textField: UITextField!
+    //value for location textfield 
+    var college : College!
+    var toPass : String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
-        //textField.text = collegeLocation.locationTextField
-      // findLocation(textField.text)
-    
+        textField.text = toPass
+        findLocation("\(toPass)")
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

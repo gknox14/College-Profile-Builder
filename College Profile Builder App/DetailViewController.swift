@@ -16,10 +16,9 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate,  U
     @IBOutlet weak var numberOfStudentsTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var urlTextField: UITextField!
-    let imagePicker = UIImagePickerController()
     
+    let imagePicker = UIImagePickerController()
     var college : College!
-    var collegeLocation = DetailViewController() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,15 +71,15 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate,  U
     @IBAction func mapButton(sender: AnyObject) {
         if locationTextField.text?.characters.count != 0 {
             college.location = locationTextField.text!
-            performSegueWithIdentifier("LocationSegue", sender: self)
         }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let dvc = segue.destinationViewController as! Map
-        dvc.collegeLocation = self.collegeLocation
+        if (segue.identifier == "LocationSegue") {
+            var svc = segue.destinationViewController
+                as! Map;
+            svc.toPass = locationTextField.text
+        }
     }
     
-    
-
 
 }
